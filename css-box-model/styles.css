@@ -1,0 +1,17 @@
+button.language {
+  font-size: 24px;
+  background-color: lightgray;
+  margin: 0 12px;
+  padding: 6px 16px;
+  border-radius: 6px;
+}
+
+button:hover {
+  transform: rotate(360deg);
+  transition: all 500ms ease-in-out;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+}
