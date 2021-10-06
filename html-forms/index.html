@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+  <h1>Coding Form!</h1>
+    <form action="www.codingform.com/why.php">
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email"/>
+      </div>
+      <div>
+        <label for="coding-is-cool">Why is coding cool?</label>
+        <select name="coding-is-cool" id="coding-is-cool">
+          <option value="Select an option">Select an option</option>
+          <option value="Because it's powerful">Because it's powerful</option>
+          <option value="Because it's interesting">Because it's interesting</option>
+          <option value="Because it's fun">Because it's fun</option>
+        </select>
+      </div>
+      <div>Favorite Language (choose one)
+        <input type="radio" value="HTML" name="favorite-lang"/>
+        <label for="HTML" id="HTML">HTML</label>
+        <input type="radio" value="CSS" name="favorite-lang"/>
+        <label for="CSS" id="CSS">CSS</label>
+        <input type="radio" value="JavaScript" name="favorite-lang"/>
+        <label for="JavaScript" id="JavaScript">JavaScript</label>
+      </div>
+      <div>Would you like to sign up for more information?
+        <br />
+        <input type="checkbox" value="subscribe" id="subscribe" name="subscribe"/>
+        <label name="subscribe" for="subscribe">Sign me up!</label>
+      </div>
+      <div>
+        <label for="comments">Comments</label>
+        <br />
+        <textarea name="comments" id="comments" cols="20" rows="15"></textarea>
+      </div>
+      <input type="submit" value="Submit"/>
+    </form>
+  </body>
+</html>
