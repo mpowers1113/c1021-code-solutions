@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+button {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 6px;
+  background-color: transparent;
+  outline: none;
+  box-shadow: 0 0 5px #9eda82;
+}
+
+button:hover {
+  background-color: #9eda82;
+  color: white;
+  cursor: pointer;
+}
+
+thead {
+  background-color: black;
+  color: white;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: lightgray;
+}
