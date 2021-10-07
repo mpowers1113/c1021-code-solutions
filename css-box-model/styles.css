@@ -7,8 +7,6 @@ button.language {
 }
 
 button:hover {
-  transform: rotate(360deg);
-  transition: all 500ms ease-in-out;
   cursor: pointer;
 }
 
