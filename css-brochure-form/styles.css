@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+form {
+  width: 50%;
+  margin: 0 auto;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Brandon Grotesque', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #eb5d58;
+  letter-spacing: 1px;
+}
+
+label {
+  font-family: 'Brandon Grotesque', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  padding-left: 10px;
+  color: #474747;
+}
+
+div {
+  margin-bottom: 5px;
+  margin-top: 2.5px;
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  border-radius: 6px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border: 1px;
+  border-color: #d7d8d8;
+  border-style: solid;
+  font-family: 'Atlas Grotesque', sans-serif;
+  font-size: 18px;
+}
+
+input::placeholder {
+  font-weight: lighter;
+  color: #cbcecd;
+}
+
+select {
+  width: 100%;
+  height: 50px;
+  border-style: solid;
+  border-radius: 6px;
+  border-color: #cbcecd;
+  background-color: #f3f3f3;
+  font-family: 'Atlas Grotesque', sans-serif;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+label#engineers-label {
+  font-size: 14px;
+  font-family: 'Atlas Grotesque', sans-serif;
+}
+
+select#engineers-select {
+  font-family: 'Brandon Grotesque', sans-serif;
+  color: #474747;
+}
+
+button {
+  margin-top: 10px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #eb5d58;
+  border: none;
+  color: white;
+  font-family: 'Brandon Grotesque', sans-serif;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 0 22px;
+}
+
+.button-div {
+  margin: 0 auto;
+  text-align: right;
+}
