@@ -9,7 +9,7 @@
 }
 
 .column-one-fourth {
-  flex-basis: 25%;
+  flex-grow: 25%;
 }
 
 .column-one-fourth img {
@@ -19,12 +19,13 @@
 
 .column-full {
   justify-content: flex-start;
+  align-content: flex-start;
 }
 
 .column-one-third {
-  flex-basis: calc(100% / 3);
+  flex-grow: calc(100% / 3);
 }
 
 .column-two-thirds {
-  flex-basis: calc(100% / 6);
+  flex-grow: calc(100% / 6);
 }
