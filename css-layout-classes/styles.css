@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
@@ -9,23 +13,25 @@
 }
 
 .column-one-fourth {
-  flex-grow: 25%;
+  width: 25%;
 }
 
 .column-one-fourth img {
-  object-fit: cover;
   width: 100%;
 }
 
 .column-full {
-  justify-content: flex-start;
-  align-content: flex-start;
+  width: 100%;
 }
 
 .column-one-third {
-  flex-grow: calc(100% / 3);
+  flex-basis: calc(100% / 3);
+}
+
+.column-one-third img {
+  width: 100%;
 }
 
 .column-two-thirds {
-  flex-grow: calc(100% / 6);
+  flex-basis: calc(200% / 3);
 }
