@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  max-width: 880px;
+  display: flex;
+  padding-left: 4em;
+  padding-right: 4em;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: 'Tiempos Headline', sans-serif;
+  justify-content: space-between;
+}
+
+.row-nav {
+  max-width: 880px;
+  display: flex;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: 'Tiempos Headline', sans-serif;
+  border-bottom: 1px solid lightgray;
+}
+
+.contact-us {
+  height: 2rem;
+  background-color: #294264;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  width: 5rem;
+}
+
+.column-half-module {
+  color: #525250;
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.column-half-module-1 {
+  flex: 1;
+}
+
+.column-half-module-2 {
+  flex: 1;
+}
+
+.column-full-module {
+  color: #525250;
+  text-align: center;
+  padding: 0 3rem;
+  line-height: 2rem;
+}
+
+.column-one-half-cta {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-items: space-between;
+
+  /* align-content: center; */
+}
+
+.row-cta {
+  max-width: 880px;
+  display: flex;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-family: 'Tiempos Headline', sans-serif;
+  color: #848484;
+  font-size: 14px;
+  align-items: center;
+}
+
+.column-one-half-cta h2,
+.column-one-half-cta p {
+  margin: 0.25rem;
+}
+
+.column-one-half {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+}
+
+.column-one-half-nav {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  text-decoration: none;
+  font-size: 12px;
+  justify-items: center;
+}
+
+.column-one-half-nav a {
+  text-decoration: none;
+  color: #c6c6c6;
+}
+
+.column-one-half-nav img {
+  width: 25%;
+}
+
+.column-one-quarter {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  justify-content: flex-start;
+}
+
+.column-one-quarter a,
+.column-one-quarter h4 {
+  padding: 0.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+footer {
+  color: white;
+  background-color: #525250;
+  margin-left: 2rem;
+
+  /* //fix this, not centering */
+}
+
+.column-three-quarters {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.get-started {
+  width: 6rem;
+}
+
+.column-full-bottom a {
+  text-decoration: none;
+  padding: 1rem;
+  color: #848484;
+  font-family: 'Tiempos Headline', sans-serif;
+}
+
+.column-full-bottom {
+  display: flex;
+}
+
+.hero {
+  width: 100%;
+  height: 400px;
+  background-size: auto 100%;
+  background-image: url('images/hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+.row-backdrop {
+  width: 880px;
+  background-color: #fafafa;
+}
