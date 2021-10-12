@@ -12,7 +12,7 @@ var orderHistory = [
       category: 'book',
       qty: 1,
       itemName: 'JavaScript for Impatient Programmers',
-      author_or_manufacturer: 'Rauschmayer, Dr. Axel',
+      creator: 'Rauschmayer, Dr. Axel',
       price: 34.00,
       priceIn: 'USD'
     }]
@@ -30,7 +30,7 @@ var orderHistory = [
       category: 'book',
       qty: 1,
       itemName: 'The Timeless Way of Building',
-      author_or_manufacturer: 'Alexander, Christopher',
+      creator: 'Alexander, Christopher',
       price: 44.53,
       priceIn: 'USD'
     }]
@@ -49,7 +49,7 @@ var orderHistory = [
       category: 'electronics',
       qty: 1,
       itemName: 'Gamecube Controller Adapter. Super Smash Bros Switch Gamecube Adapter for WII U, PC. Support Turbo and Vibration Features. No Driver and No Lag-Gamecube Adapter',
-      author_or_manufacturer: 'Optic',
+      creator: 'Optic',
       price: 17.22,
       priceIn: 'USD'
     }]
@@ -69,14 +69,14 @@ var orderHistory = [
         item: 'electronics',
         qty: 1,
         itemName: 'GameCube Controller - Super Smash Bros. Edition (Nintendo Switch)',
-        author_or_manufacturer: 'Nintendo',
+        creator: 'Nintendo',
         price: 94.95,
         priceIn: 'USD'
       }, {
         item: 'book',
         qty: 1,
         itemName: 'The Art of Sql',
-        author_or_manufacturer: 'Faroult, Stephane',
+        creator: 'Faroult, Stephane',
         price: 33.99,
         priceIn: 'USD'
       }
