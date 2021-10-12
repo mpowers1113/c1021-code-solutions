@@ -1,26 +1,23 @@
 function convertMinutesToSeconds(min) {
-  return min * 60;
+  console.log('mintues to seconds', min * 60);
 }
 
 function greet(name) {
-  return 'Hey, ' + name;
+  var helloThere = 'Hey, ' + name;
+  console.log('greeting', helloThere);
 }
 
 function getArea(width, height) {
-  return width * height;
+  console.log('area is ', width * height);
 }
 
 function getFirstName(person) {
-  return person.firstName;
+  console.log('first name is ', person.firstName);
 }
 
 function getLastElement(array) {
-  return array[array.length - 1];
+  console.log('array length is ', array[array.length - 1]);
 }
-
-var person = { firstName: 'Matt', lastName: 'Powers' };
-
-var testArray = [0, 1, 2, 3, 4];
 
 convertMinutesToSeconds(5);
 
@@ -28,6 +25,6 @@ greet('Matt');
 
 getArea(3, 5);
 
-getFirstName(person);
+getFirstName({ firstName: 'Matt', lastName: 'Powers' });
 
-getLastElement(testArray);
+getLastElement([0, 1, 2, 3, 4]);
