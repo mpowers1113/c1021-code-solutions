@@ -8,14 +8,14 @@ var orderHistory = [
     returnWindowOpen: false,
     returnWindowCloseDate: '9-7-2020',
     total: 34.00,
-    numItems: {
+    numItems: [{
       category: 'book',
       qty: 1,
       itemName_or_title: 'JavaScript for Impatient Programmers',
       author_or_manufacturer: 'Rauschmayer, Dr. Axel',
       price: 34.00,
       priceIn: 'USD'
-    }
+    }]
   },
   {
     orderNumber: 113 - 998468 - 1280257,
@@ -26,14 +26,14 @@ var orderHistory = [
     returnWindowOpen: false,
     returnWindowCloseDate: '8-19-20',
     total: 44.53,
-    numItems: {
+    numItems: [{
       category: 'book',
       qty: 1,
       itemName_or_title: 'The Timeless Way of Building',
       author_or_manufacturer: 'Alexander, Christopher',
       price: 44.53,
       priceIn: 'USD'
-    }
+    }]
 
   },
   {
@@ -45,21 +45,21 @@ var orderHistory = [
     returnWindowOpen: false,
     returnWindowCloseDate: '8-5-2020',
     total: 17.22,
-    numItems: {
+    numItems: [{
       category: 'electronics',
       qty: 1,
       itemName_or_title: 'Gamecube Controller Adapter. Super Smash Bros Switch Gamecube Adapter for WII U, PC. Support Turbo and Vibration Features. No Driver and No Lag-Gamecube Adapter',
       author_or_manufacturer: 'Optic',
       price: 17.22,
       priceIn: 'USD'
-    }
+    }]
   },
   {
     orderNumber: 113 - 2883177 - 2648248,
     orderDate: '7-3-2020',
     ShippingAddress: 'JS Masher',
     isDelivered: true,
-    DeliveryDate: '7-7-2020',
+    DeliveryDate: '7-5-2020',
     returnWindowOpen: false,
     returnWindowCloseDate: '8-4-2020',
     total: 138.93,
@@ -84,3 +84,7 @@ var orderHistory = [
     ]
   }
 ];
+
+const highestPriced = orderHistory.reduce((acc, cur) => cur.total > acc.total ? cur : acc);
+
+const sortByPriceAscending = orderHistory.sort((a, b) => a.total - b.total);
