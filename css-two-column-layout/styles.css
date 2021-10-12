@@ -15,7 +15,7 @@
   width: 100%;
 }
 
-.row-header {
+.header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,30 +51,8 @@
   color: rgb(116, 114, 114);
 }
 
-.column-one-fourth {
-  width: 25%;
-  display: flex;
-  align-items: flex-start;
-}
-
 .image {
   width: 100px;
-}
-
-.column-three-fourths {
-  width: 75%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 10px 0;
-}
-
-.column-three-fourths h4 {
-  margin: 10px 0;
-}
-
-.column-three-fourths p {
-  margin: 5px 0;
 }
 
 .button-row {
