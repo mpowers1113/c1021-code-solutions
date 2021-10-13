@@ -1,30 +1,31 @@
 function convertMinutesToSeconds(min) {
-  console.log('mintues to seconds', min * 60);
+  return min * 60;
 }
 
 function greet(name) {
   var helloThere = 'Hey, ' + name;
-  console.log('greeting', helloThere);
+  return helloThere;
 }
 
 function getArea(width, height) {
-  console.log('area is ', width * height);
+  return width * height;
 }
 
 function getFirstName(person) {
-  console.log('first name is ', person.firstName);
+  return person.firstName;
 }
 
 function getLastElement(array) {
-  console.log('array length is ', array[array.length - 1]);
+
+  return array[array.length - 1];
 }
 
-convertMinutesToSeconds(5);
+console.log('convert 5 minutes to seconds:', convertMinutesToSeconds(5));
 
-greet('Matt');
+console.log('greet matt:', greet('Matt'));
 
-getArea(3, 5);
+console.log('area of 5 and 3 is', getArea(3, 5));
 
-getFirstName({ firstName: 'Matt', lastName: 'Powers' });
+console.log('first name is', getFirstName({ firstName: 'Matt', lastName: 'Powers' }));
 
-getLastElement([0, 1, 2, 3, 4]);
+console.log('last element is', getLastElement([0, 1, 2, 3, 4]));
