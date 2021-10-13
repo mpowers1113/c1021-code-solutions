@@ -73,13 +73,8 @@ h4 {
   position: relative;
   display: flex;
   overflow: hidden;
-  padding-left: 4rem;
-  padding-top: 8rem;
-  padding-bottom: 7rem;
-  margin-top: 6rem;
-  margin-bottom: 3rem;
-  margin-right: 3rem;
-  margin-left: 3rem;
+  padding: 8rem 0 7rem 4rem;
+  margin: 6rem 3rem 3rem 3rem;
   border-top: 1px solid #dedbdb;
 }
 
@@ -92,20 +87,20 @@ h4 {
   height: 100%;
 }
 
-.hero-col {
+.column-three-quarters {
   flex-basis: 65%;
   line-height: 2rem;
   color: white;
 }
 
-.hero-col h1 {
+.column-three-quarters h1 {
   letter-spacing: 0.2rem;
   line-height: 2.5rem;
 }
 
-.hero-col h1,
-.hero-col p,
-.hero-col button {
+.column-three-quarters h1,
+.column-three-quarters p,
+.column-three-quarters button {
   position: relative;
 }
 
