@@ -10,9 +10,7 @@
 }
 
 .row {
-  flex-wrap: wrap;
-  display: inline-flex;
-  width: 100%;
+  display: flex;
 }
 
 .header {
@@ -40,8 +38,6 @@
 
 .column-one-half {
   width: 50%;
-  display: flex;
-  flex-wrap: wrap;
   padding: 15px;
 }
 
@@ -49,6 +45,14 @@
   font-size: 14px;
   line-height: 1.5rem;
   color: rgb(116, 114, 114);
+}
+
+.column-one-fourth {
+  width: 25%;
+}
+
+.column-three-fourths {
+  width: 75%;
 }
 
 .image {
