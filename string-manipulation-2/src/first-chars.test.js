@@ -31,8 +31,8 @@ describe('firstChars(length, string)', function () {
     expect(result).to.equal('');
   });
 
-  it('returns the first 12 characters of "LearningFuze"', function () {
-    var result = firstChars(12, 'LearningFuze');
+  it('returns the first 20 characters of "LearningFuze"', function () {
+    var result = firstChars(20, 'LearningFuze');
     expect(result).to.equal('LearningFuze');
   });
 
