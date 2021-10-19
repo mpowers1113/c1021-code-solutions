@@ -3,10 +3,11 @@ var $clickCount = document.querySelector('.click-count');
 
 $hotButton.addEventListener('click', incrementCounter);
 
-var numClicks = 1;
+var numClicks = 0;
 
 function incrementCounter(event) {
-  $clickCount.textContent = 'Clicks: ' + numClicks++;
+  numClicks++;
+  $clickCount.textContent = 'Clicks: ' + numClicks;
   if (numClicks < 4) {
     $hotButton.className = 'hot-button cold';
   } else if (numClicks < 7) {
