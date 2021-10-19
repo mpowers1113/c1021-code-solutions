@@ -10,8 +10,8 @@ var modalSwitch = true;
 function toggleModal(event) {
   modalSwitch = !modalSwitch;
   if (modalSwitch === true) {
-    $overlay.style.visibility = 'hidden';
+    $overlay.className = 'overlay hidden';
   } else {
-    $overlay.style.visibility = 'visible';
+    $overlay.className = 'overlay';
   }
 }
