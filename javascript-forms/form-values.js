@@ -11,4 +11,7 @@ function getFormValues(event) {
     message: $inputs.message.value
   };
   console.log('userInput', userInput);
+  $inputs.name.value = '';
+  $inputs.email.value = '';
+  $inputs.message.value = '';
 }
