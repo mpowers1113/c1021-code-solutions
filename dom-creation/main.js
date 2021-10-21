@@ -61,14 +61,13 @@ var pokedex = [
 
 for (var i = 0; i < pokedex.length; i++) {
   var pokeIndex = pokedex[i];
-  renderPokemon(pokeIndex);
+  var nodeToAppend = renderPokemon(pokeIndex);
+  $row.appendChild(nodeToAppend);
 }
 
 function renderPokemon(pokemon) {
-
   var $column = document.createElement('div');
   $column.setAttribute('class', 'column-third');
-  $row.appendChild($column);
 
   var $pokeCard = document.createElement('div');
   $pokeCard.setAttribute('class', 'pokemon-card');
@@ -93,4 +92,6 @@ function renderPokemon(pokemon) {
   var $description = document.createElement('p');
   $description.textContent = `${pokemon.description}`;
   $pokeCardText.appendChild($description);
+
+  return $column;
 }
