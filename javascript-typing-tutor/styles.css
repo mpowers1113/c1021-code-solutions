@@ -1,0 +1,32 @@
+
+.row {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+.center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.column {
+  flex-basis: 80%;
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: -0.05rem;
+}
+
+.underlined {
+  border-bottom: 1px solid black;
+}
+
+.correct {
+  color: limegreen;
+}
+
+.incorrect {
+  color: red;
+  border-bottom: 1px solid red;
+}
