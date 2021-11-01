@@ -11,10 +11,11 @@
 
 function capitalizeWord(word) {
   var nowCapitalized = '';
+  if (word.toUpperCase() === 'JAVASCRIPT') {
+    return 'JavaScript';
+  }
   for (var i = 0; i < word.length; i++) {
-    if (word.toUpperCase() === 'JAVASCRIPT') {
-      return 'JavaScript';
-    } else if (i === 0) {
+    if (i === 0) {
       nowCapitalized += word[0].toUpperCase();
     } else {
       nowCapitalized += word[i].toLowerCase();
