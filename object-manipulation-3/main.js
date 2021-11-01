@@ -108,13 +108,3 @@ function findWinner() {
   }
   console.log(`${winner} is the winner with a score of ${highScore}`);
 }
-
-function playGame() {
-  generateDeck();
-  shuffle();
-  deal();
-  getHandScore();
-  findWinner();
-}
-
-playGame();
