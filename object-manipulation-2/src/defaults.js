@@ -19,7 +19,6 @@
 // console.log(target) // -> { foo: 1, bar: 2, baz: 3 }
 
 function defaults(target, source) {
-  var newDefaultObj;
 
   var targetKeys = Object.keys(target);
   var sourceKeys = Object.keys(source);
@@ -29,8 +28,6 @@ function defaults(target, source) {
     if (targetKeys.includes(eachSourceKey) === false) {
       target[eachSourceKey] = source[eachSourceKey];
     }
-    newDefaultObj = target;
   }
-  return newDefaultObj;
-
+  return target;
 }
