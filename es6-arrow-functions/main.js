@@ -7,31 +7,32 @@ const jokester = {
     $jokeForm.classList.add('d-none');
     const $introStatement = this.renderJokePhrase('Hey Flash...');
     this.appendJokePhrase($introStatement);
-    setTimeout(function () {
-      const $jokeSetup = jokester.renderJokePhrase(setup);
-      jokester.appendJokePhrase($jokeSetup);
-      setTimeout(function () {
-        const $jokePunchline = jokester.renderJokePhrase(punchline);
-        jokester.appendJokePhrase($jokePunchline);
+    setTimeout(() => {
+      const $jokeSetup = this.renderJokePhrase(setup);
+      this.appendJokePhrase($jokeSetup);
+      setTimeout(() => {
+        const $jokePunchline = this.renderJokePhrase(punchline);
+        this.appendJokePhrase($jokePunchline);
         flash.laugh();
       }, 2000);
     }, 2000);
   },
-  renderJokePhrase: phrase => {
+  renderJokePhrase: function (phrase) {
     const $phrase = document.createElement('h4');
     $phrase.textContent = phrase;
     $phrase.className = 'fade-in text-center';
     return $phrase;
   },
-  appendJokePhrase: $phrase => $jokeContainer.append($phrase)
-
+  appendJokePhrase: function ($phrase) {
+    $jokeContainer.append($phrase);
+  }
 };
 
 const flash = {
   laughingUrl: 'images/flash-laugh.gif',
   laugh: function () {
-    setTimeout(function () {
-      $flashImage.setAttribute('src', flash.laughingUrl);
+    setTimeout(() => {
+      $flashImage.setAttribute('src', this.laughingUrl);
     }, 3000);
   }
 };
