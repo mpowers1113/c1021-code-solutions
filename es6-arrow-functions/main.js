@@ -5,27 +5,27 @@ const $jokeForm = document.querySelector('#joke-form');
 const jokester = {
   tellJoke: function (setup, punchline) {
     $jokeForm.classList.add('d-none');
-    const $introStatement = renderJokePhrase('Hey Flash...');
-    appendJokePhrase($introStatement);
+    const $introStatement = this.renderJokePhrase('Hey Flash...');
+    this.appendJokePhrase($introStatement);
     setTimeout(function () {
-      const $jokeSetup = renderJokePhrase(setup);
-      appendJokePhrase($jokeSetup);
+      const $jokeSetup = jokester.renderJokePhrase(setup);
+      jokester.appendJokePhrase($jokeSetup);
       setTimeout(function () {
-        const $jokePunchline = renderJokePhrase(punchline);
-        appendJokePhrase($jokePunchline);
+        const $jokePunchline = jokester.renderJokePhrase(punchline);
+        jokester.appendJokePhrase($jokePunchline);
         flash.laugh();
       }, 2000);
     }, 2000);
-  }
+  },
+  renderJokePhrase: phrase => {
+    const $phrase = document.createElement('h4');
+    $phrase.textContent = phrase;
+    $phrase.className = 'fade-in text-center';
+    return $phrase;
+  },
+  appendJokePhrase: $phrase => $jokeContainer.append($phrase)
 
 };
-const renderJokePhrase = phrase => {
-  const $phrase = document.createElement('h4');
-  $phrase.textContent = phrase;
-  $phrase.className = 'fade-in text-center';
-  return $phrase;
-};
-const appendJokePhrase = $phrase => $jokeContainer.append($phrase);
 
 const flash = {
   laughingUrl: 'images/flash-laugh.gif',
