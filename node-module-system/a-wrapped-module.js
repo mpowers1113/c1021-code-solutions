@@ -1,0 +1,1 @@
+console.log('exports', typeof exports, exports.value, exports, 'require', typeof require, require.value, require, 'module', typeof module, module.value, module, 'filename', typeof __filename, __filename.value, __filename, 'dirname', typeof __dirname, __dirname.value, __dirname);
