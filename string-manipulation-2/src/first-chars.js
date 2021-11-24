@@ -1,7 +1,10 @@
 /* exported firstChars */
 // create new variable for string
 // if string is empty, return empty string
+
+
 // if length is greater than string's length, length is equal to string length
+
 // access string via indexes
 // if string variable is equal to length argument, return new string
 

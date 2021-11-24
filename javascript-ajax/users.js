@@ -5,8 +5,13 @@ function userRequestHandler() {
   xhr.open('GET', 'https://jsonplaceholder.typicode.com/users');
   xhr.responseType = 'json';
   xhr.addEventListener('load', function () {
+
     console.log(xhr.status);
     console.log(xhr.response);
+    var users = xhr.response;
+    if (xhr.status === 200) {
+
+
     var users = xhr.response;
     if (xhr.status === 200) {
 
