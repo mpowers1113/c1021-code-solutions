@@ -5,14 +5,29 @@ const fs = require('fs');
 
 const catnip = args.slice(2);
 
-function readItAndWeep(input) {
-  input.forEach(cat => {
-    const snippedAndTrimmed = './' + cat.trim();
-    fs.readFile(snippedAndTrimmed, 'utf8', (err, data) => {
+function printArray(input) {
+  const arrayOfText = [];
+  for (let i = 0; i < input.length; i++) {
+    const fileName = './' + input[i];
+    fs.readFile(fileName, 'utf8', (err, data) => {
+      if (err) throw err;
+      arrayOfText[i] = data;
+      if (i === input.length - 1) {
+        console.log(arrayOfText.join(''));
+      }
+    });
+  }
+}
+printArray(catnip);
+
+function recursiveReadPrint(input) {
+  if (input.length >= 1) {
+    const fileName = './' + input[0];
+    fs.readFile(fileName, 'utf8', (err, data) => {
       if (err) throw err;
       console.log(data);
     });
-  });
+    return recursiveReadPrint(input.slice(1));
+  }
 }
-
-console.log(readItAndWeep(catnip));
+recursiveReadPrint(catnip);
