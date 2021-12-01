@@ -26,12 +26,9 @@ const gradesArray = [];
 for (const grade in grades) {
   gradesArray.push(grades[grade]);
 }
-console.log(gradesArray);
 
-app.listen(3000, () => {
-  console.log('listening on port 3000');
-});
+app.listen(3000);
 
 app.use('/api/grades', (req, res) => {
-  res.send(gradesArray);
+  res.json(gradesArray);
 });
