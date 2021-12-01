@@ -24,7 +24,6 @@ app.put('/api/grades/put', (req, res) => {
   const incomingObject = req.body;
   incomingObject.id = nextID;
   grades[incomingObject.id] = incomingObject;
-  res.json(grades[incomingObject.id]);
   res.status(201);
-  res.end();
+  res.json(grades[incomingObject.id]);
 });
