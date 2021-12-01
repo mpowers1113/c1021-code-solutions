@@ -14,11 +14,8 @@ app.get('/api/grades', (req, res) => {
 });
 
 app.delete('/api/grades/:id', (req, res) => {
-  const deleteId = req.params;
-  const id = Object.values(deleteId);
-  const numberID = Number(id[0]);
-  delete grades[numberID];
-  console.log(`Deleted id ${numberID}!`);
+  const deleteId = req.params.id;
+  delete grades[deleteId];
   res.json(grades);
 });
 
