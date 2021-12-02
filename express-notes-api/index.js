@@ -30,7 +30,7 @@ app.get('/application/json/:id', (req, res) => {
 });
 
 app.put('/api/notes', (req, res) => {
-  if (!Object.keys(req.body).length) {
+  if (!Object.keys(req.body).includes('content')) {
     res.status(400).json({ Error: 'Empty response body' });
   } else {
     data.nextId = Number(data.nextId) + 1;
