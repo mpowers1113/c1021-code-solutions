@@ -19,8 +19,6 @@ app.get('/application/json', (req, res) => {
 });
 
 app.get('/application/json/:id', (req, res) => {
-
-  const notes = data.notes;
   const incomingID = req.params.id;
   if (!parseInt(incomingID) || incomingID < 0) {
     res.status(400).json({ Error: 'ID cannot be a negative or non-integer' });
@@ -32,10 +30,8 @@ app.get('/application/json/:id', (req, res) => {
 });
 
 app.put('/api/notes', (req, res) => {
-  console.log(req.body);
   if (!Object.keys(req.body).length) {
     res.status(400).json({ Error: 'Empty response body' });
-
   } else {
     data.nextId = Number(data.nextId) + 1;
     const incomingObject = req.body;
