@@ -1,5 +1,5 @@
 {
-  "nextId": 23,
+  "nextId": 24,
   "notes": {
     "2": {
       "id": 2,
@@ -40,6 +40,10 @@
     "17": {
       "content": "every deep thinker is more afraid of being understood than of being misunderstood.",
       "id": 17
+    },
+    "24": {
+      "content": "some say your attitude determines your lattitude",
+      "id": 24
     }
   }
 }

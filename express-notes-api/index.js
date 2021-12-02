@@ -18,7 +18,7 @@ app.get('/application/json', (req, res) => {
   res.json(notesArray);
 });
 
-app.get('/application/json/:id', (req, res) => {
+app.put('/application/json/:id', (req, res) => {
   const incomingID = req.params.id;
   if (!parseInt(incomingID) || incomingID < 0) {
     res.status(400).json({ Error: 'ID cannot be a negative or non-integer' });
@@ -29,21 +29,23 @@ app.get('/application/json/:id', (req, res) => {
   }
 });
 
-app.put('/api/notes', (req, res) => {
-  if (!Object.keys(req.body).includes('content')) {
+app.post('/api/notes', (req, res) => {
+  const content = 'content';
+  if (content in req.body === false) {
     res.status(400).json({ Error: 'Empty response body' });
   } else {
     data.nextId = Number(data.nextId) + 1;
     const incomingObject = req.body;
     incomingObject.id = data.nextId;
     notes[incomingObject.id] = incomingObject;
-    res.status(201);
-    res.json(notes[incomingObject.id]).status(201);
     const newJSON = JSON.stringify(data, null, 2);
     fs.writeFile('./data.json', newJSON, err => {
       if (err) {
-        console.err(err);
-        res.status(500);
+        console.error(err);
+        res.status(500).json({ error: 'an unexpected error occurred.' });
+      } else {
+        res.status(201);
+        res.json(notes[incomingObject.id]).status(201);
       }
     });
   }
@@ -60,10 +62,11 @@ app.delete('/api/notes/:id', (req, res) => {
     const newJSON = JSON.stringify(data, null, 2);
     fs.writeFile('./data.json', newJSON, err => {
       if (err) {
-        console.err(err);
+        console.error(err);
         res.status(500);
+      } else {
+        res.status(204).json({});
       }
     });
-    res.status(204).json({});
   }
 });
