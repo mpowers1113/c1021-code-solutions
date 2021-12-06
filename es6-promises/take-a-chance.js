@@ -7,5 +7,5 @@ module.exports = function takeAChance(name) {
         ? resolve(`Hooray! You're so lucky, ${name}!`)
         : reject(new Error(`It's just bad luck, ${name}.`));
     }, 2000);
-  }).then(res => console.log(res)).catch(err => console.log(err.message));
+  });
 };
