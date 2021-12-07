@@ -18,4 +18,6 @@ const orderFive = numbers.filter(num => num > 5);
 
 const startsWithE = names.filter(each => each[0] === 'E');
 
-const haveD = names.filter(word => word.split('').includes('d') || word.split('').includes('D'));
+const haveD = names.filter(word => word.toLocaleLowerCase().includes('d'));
+
+console.log('evenNumbers', evenNumbers, 'orderFive', orderFive, 'startsWithE', startsWithE, 'haveD', haveD);
