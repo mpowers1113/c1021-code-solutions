@@ -57,13 +57,7 @@ app.post('/api/grades', (req, res, next) => {
     .query(sql, [gradeToInsert[name], gradeToInsert[course], gradeToInsert[score]])
     .then(dbres => {
       const dbReturning = dbres.rows[0];
-      if (!dbReturning) {
-        res.status(300).json({
-          error: 'An unexpected error ocurred'
-        });
-      } else {
-        res.status(201).json(dbReturning);
-      }
+      res.status(201).json(dbReturning);
     }).catch(err => {
       console.error(err);
       res.status(500).json({ error: 'an unexpected error ocurred' });
