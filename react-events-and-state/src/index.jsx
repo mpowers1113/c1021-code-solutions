@@ -1,5 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+
+const FuncButton = props => {
+  const [text, setText] = useState(false);
+  const handleClick = () => {
+    if (text) setText(false);
+    else setText(true);
+  };
+  return (
+        <div>
+            <button onClick = {handleClick}>{text ? 'suhhhh' : 'duuuuude'}</button>
+        </div>
+  );
+};
 
 class MyButton extends React.Component {
   constructor(props) {
@@ -24,6 +37,8 @@ class MyButton extends React.Component {
   render() {
     return (
         <div>
+            <FuncButton/>
+            <br></br>
             <button onClick={this.handleClick}>{this.state.isClicked ? 'Ello' : 'Guvnah'}</button>
         </div>
     );
