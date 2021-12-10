@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 
 const FuncButton = props => {
   const [text, setText] = useState(false);
-  const handleClick = () => {
+  const [size, setSize] = useState(16);
+  const handleClick = event => {
+    setSize(size + 10);
+    event.target.style.fontSize = `${size + 1}px`;
     if (text) setText(false);
     else setText(true);
   };
