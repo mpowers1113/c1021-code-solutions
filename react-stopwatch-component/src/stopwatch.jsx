@@ -32,7 +32,7 @@ class StopWatch extends React.Component {
   }
 
   reset() {
-    this.setState({ seconds: 0, isCounting: false, timer: null });
+    !this.state.isCounting && this.setState({ seconds: 0, isCounting: false, timer: null });
   }
 
   pause() {
