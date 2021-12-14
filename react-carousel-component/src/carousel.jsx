@@ -5,13 +5,24 @@ class Carousel extends React.Component {
     super(props);
     this.state = {
       currentIndex: 0,
-      image: [{
-        url: 'https://www.thefamouspeople.com/profiles/images/friedrich-nietzsche-22.jpg', key: 0
-      }, { url: 'https://cdn.quotesgram.com/img/55/4/406926057-Friedrich_Nietzsche_corte.jpg', key: 1 }, { url: 'https://www.artvoice.com/wp-content/uploads/2016/06/nietzsche-e1466722083161.jpg', key: 2 }, { url: 'http://www.borromeoseminary.org/wp-content/uploads/2013/10/NIETZSCHE.jpg', key: 3 }, { url: 'https://images.fineartamerica.com/images/artworkimages/mediumlarge/1/friedrich-nietzsche-pop-art-dan-sproul.jpg', key: 4 }, { url: 'https://fineartamerica.com/images-medium-5/friedrich-nietzsche-watercolor-portrait-fabrizio-cassetta.jpg', key: 5 }, { url: 'https://i.ebayimg.com/images/i/390795452465-0-1/s-l1000.jpg', key: 6 }]
+      image: []
     };
     this.toggleRight = this.toggleRight.bind(this);
     this.toggleLeft = this.toggleLeft.bind(this);
     this.dotToggle = this.dotToggle.bind(this);
+    this.addImage = this.addImage.bind(this);
+    this.addImage();
+  }
+
+  addImage() {
+    const imageArr = this.props.image;
+    for (const img of imageArr) {
+      if (this.state.image.includes(img) === false) {
+        const newImage = { url: img, key: this.state.image.length + 1 };
+        this.state.image.push(newImage);
+      }
+    }
+    this.props.image.length = 0;
   }
 
   toggleLeft() {
@@ -44,9 +55,8 @@ class Carousel extends React.Component {
           <div className="column-20 left"><i onClick={this.toggleLeft} className="fas fa-chevron-left fa-3x"></i></div>
           <div className="column-80"><img src={this.state.image[this.state.currentIndex].url} alt="image" /></div>
           <div className="column-20 right"><i onClick={this.toggleRight} className="fas fa-chevron-right fa-3x"></i></div></div>
-        <div className="row dots">{this.state.image.map(img => {
-
-          return <i key= {img.key} id={img.key} onClick={this.dotToggle} className={img.key === this.state.currentIndex ? 'fas fa-circle' : 'far fa-circle'}></i>;
+        <div className="row dots">{this.state.image.map((img, index) => {
+          return <i key= {index} id={index} onClick={this.dotToggle} className={index === this.state.currentIndex ? 'fas fa-circle' : 'far fa-circle'}></i>;
 
         })}
         </div>
