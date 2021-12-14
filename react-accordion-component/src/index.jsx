@@ -6,7 +6,7 @@ const App = props => {
 
   return (
       <div>
-        <Accordion descriptions={['Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ipsum laboriosam, voluptates excepturi voluptas labore laudantium atque consequatur voluptate ut earum, harum quia quo numquam voluptatibus ad aliquam tempore itaque.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ipsum laboriosam, voluptates excepturi voluptas labore laudantium atque consequatur voluptate ut earum, harum quia quo numquam voluptatibus ad aliquam tempore itaque.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ipsum laboriosam, voluptates excepturi voluptas labore laudantium atque consequatur voluptate ut earum, harum quia quo numquam voluptatibus ad aliquam tempore itaque.']} titles={['HTML', 'CSS', 'JS']}/>
+        <Accordion data={[{ title: 'HTML', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ipsum laboriosam, voluptates excepturi voluptas labore laudantium atque consequatur voluptate ut earum, harum quia quo numquam voluptatibus ad aliquam tempore itaque.' }, { title: 'CSS', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ipsum laboriosam, voluptates excepturi voluptas labore laudantium atque consequatur voluptate ut earum, harum quia quo numquam voluptatibus ad aliquam tempore itaque.' }, { title: 'JavaScript', description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ipsum laboriosam, voluptates excepturi voluptas labore laudantium atque consequatur voluptate ut earum, harum quia quo numquam voluptatibus ad aliquam tempore itaque.' }]}/>
       </div>
   );
 };

@@ -3,22 +3,14 @@ import React from 'react';
 class Accordion extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { titles: [...this.props.titles], descriptions: [...this.props.descriptions], visibleDescription: null };
+    this.state = { visibleDescription: null };
     this.toggle = this.toggle.bind(this);
   }
 
-  // componentDidMount() {
-  //   const titles = this.props.titles;
-  //   const descriptions = this.props.descriptions;
-  //   for (let i = 0; i < titles.length; i++) {
-  //     this.setState({ titles: [...this.titles, titles[i]], descriptions: [...this.descriptions, descriptions[i]], isVisible: [...this.isVisible, false] });
-  //   }
-  // }
-
   toggle(event) {
     const targetIndex = event.target.id;
-    for (let i = 0; i < this.state.titles.length; i++) {
-      if (targetIndex === this.state.titles[i]) {
+    for (let i = 0; i < this.props.data.length; i++) {
+      if (targetIndex === this.props.data[i].title) {
         this.setState({ visibleDescription: i });
       }
     }
@@ -28,10 +20,10 @@ class Accordion extends React.Component {
 
     return (
         <div>
-          {this.state.titles.map((title, index) =>
+          {this.props.data.map((data, index) =>
           <div onClick={this.toggle} key = {index.toString()} className="column-50">
-            <h1 onClick={this.toggle} id={title}>{title}</h1>
-            <p className={index === this.state.visibleDescription ? '' : 'hidden'}>{this.state.descriptions[index]}</p>
+            <h1 onClick={this.toggle} id={data.title}>{data.title}</h1>
+            <p className={index === this.state.visibleDescription ? '' : 'hidden'}>{data.description}</p>
           </div>
           )}
         </div>
