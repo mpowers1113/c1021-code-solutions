@@ -1,0 +1,40 @@
+.overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.drawer {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 25%;
+  background-color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+i {
+  cursor: pointer;
+}
