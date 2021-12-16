@@ -43,18 +43,21 @@ export default class App extends React.Component {
   }
 
   toggleCompleted(todoId) {
+    const arrayCopy = [...this.state.todos];
+    const targetIndex = arrayCopy.findIndex(todo => todo.todoId === todoId);
+    let targetIsCompleted = null;
+    arrayCopy[targetIndex].isCompleted === true ? targetIsCompleted = false : targetIsCompleted = true;
     fetch(`http://localhost:3000/api/todos/${todoId}`, {
       method: 'PATCH',
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ isCompleted: true })
+      body: JSON.stringify({ isCompleted: targetIsCompleted })
     })
       .then(res => res.json())
       .then(res => {
-        const arrayCopy = this.state.todos;
-        arrayCopy[todoId - 1] = res;
+        arrayCopy[targetIndex] = res;
         this.setState({ todos: arrayCopy });
       });
   }
