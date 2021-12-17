@@ -42,29 +42,6 @@ app.post('/api/auth/sign-up', (req, res, next) => {
     .catch(err => next(err));
 });
 
-app.post('/api/auth/sign-up', (req, res, next) => {
-  const { username, password } = req.body;
-  if (!username || !password) {
-    throw new ClientError(400, 'username and password are required fields');
-  }
-  argon2.hash(password).then(hashedPassword => {
-    const sql = `
-          insert into "users" ("hashedPassword", "username")
-          values ($1, $2)
-          returning "userId", "createdAt", "username"
-          `;
-    const params = [hashedPassword, username];
-    db.query(sql, params)
-      .then(result => {
-        const [newUser] = result.rows;
-        res.status(201).json(newUser);
-      }).catch(err => {
-        console.error(err);
-        throw new ClientError(500, 'an unexpected error ocurred');
-      });
-  });
-});
-
 app.post('/api/auth/sign-in', (req, res, next) => {
   const { username, password } = req.body;
   if (!username || !password) {
