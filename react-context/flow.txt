@@ -1,0 +1,9 @@
+User can sign up: When the user clicks 'sign up' button or anchor tag 'register now', the auth-form.jsx file re-renders via the 'alternateActionHref' function to prepare to accept sign-up information from the user - changing the hash route to #sign-up. 
+
+-When the user has entered their username and password and clicks the "Register" button, the handleSubmit function in authForm.jsx fires and sends a post request to api/auth/sign-up with the entered information. Index.js has been configured to send post requests to auth/sign-up via sql INSERT statements. If there is no current user with the entered username, the new username and password are entered into the database and the password is hashed. 
+
+User can sign-in: This follows a similar flow as the above sign-up, but the post reqeust is sent to 'api/auth/sign-in' after the password has been verified. If the credentials exist in the database, the user is granted entry. 
+
+User can stay signed in: Once the user signs in, a JSON web token is saved to their local storage. When the user clicks 'refresh', the componentDidMount event fires from app.jsx and checks to see if the JSON web token is a valid token from by passing it through the decodeToken function which returns 'true' if valid. If it is not valid, decodeToken returns null and state of 'path' in app.jsx will redirect to the #sign-in page. If the JSON webtoken is valid, the route is unchanged. 
+
+User can sign-out: When the user clicks 'sign-out', the JSON web token is removed from local storage and the state of 'user' in app.jsx is set to null, redirecting them to the #sign-in page. 
