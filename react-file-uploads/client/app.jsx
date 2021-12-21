@@ -24,7 +24,7 @@ export default class App extends React.Component {
     fetch('http://localHost:3000/api/uploads', {
       method: 'POST',
       body: formData
-    }).then(res => JSON.parse(res))
+    }).then(res => res.json())
       .then(res => {
         console.log(res);
         this.setState({ caption: '' });
